@@ -1,0 +1,13 @@
+{% block content %}
+
+<div id="tester">Original</div>
+<button onmouseover="testEdit()" onmouseout="testUnEdit()">I'm a test button!</button>
+
+<script type="text/javascript">
+testEdit = () => document.getElementById('tester').innerHTML = "I am new man.";
+
+testUnEdit = () => document.getElementById('tester').innerHTML = "I'm off you bro";
+</script>
+
+
+{% endblock %}

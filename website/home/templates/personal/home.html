@@ -1,0 +1,18 @@
+{% extends "personal/header.html" %} {% block content %}
+<h2>{{ user.get_full_name }}</h2>
+<ul>
+    <li>Username: {{ user.username }}</li>
+    <li>Email: {{ user.email }}</li>
+    <li>First Name: {{ user.profile.first_name }}</li>
+    <li>Last Name: {{ user.profile.last_name }}</li>
+    <li>Location: {{ user.profile.location }}</li>
+    <li>Wins: {{ user.profile.wins }}</li>
+    <li>Loses: {{ user.profile.loses }}</li>
+    <li>Ties: {{ user.profile.ties }}</li>
+    <li>Bio: {{ user.profile.bio }}</li>
+</ul>
+
+
+
+</script>
+{% include "personal/includes/htmlsnippet.html" %} {% endblock %}

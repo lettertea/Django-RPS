@@ -1,0 +1,16 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div class="list-group">
+    {% if all_albums %}
+        {% for album in all_albums %}
+
+            <a href="{% url 'music:detail' album.id %}" class="list-group-item w3-large w3-bar-item w3-button w3-hover-blue">{{ album.album_title }}</a>
+        {% endfor %}
+    {% else %}
+        <h3> No albums were found </h3>
+    {% endif %}
+</div>
+{% endblock %}
