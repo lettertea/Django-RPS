@@ -33,41 +33,41 @@ def rps_play(request):
 
         pc_choice = choice(CHOICE)
 
-        if request.POST['input'] == 'r':
+        if request.POST['option'] == 'r':
             if pc_choice == 'p':
                 lost()
-                request.session['name'] = "You lose. Computer chose paper."
+                request.session['response'] = "You lose. Computer chose paper."
             elif pc_choice == 's':
                 won()
-                request.session['name'] = "You win! Computer chose scissors."
+                request.session['response'] = "You win! Computer chose scissors."
             elif pc_choice == 'r':
                 tied()
-                request.session['name'] = "It's a tie! Computer chose rock as well."
+                request.session['response'] = "It's a tie! Computer chose rock as well."
 
-        elif request.POST['input'] == 'p':
+        elif request.POST['option'] == 'p':
             if pc_choice == 'r':
                 won()
-                request.session['name'] = "You win! Computer chose rock. "
+                request.session['response'] = "You win! Computer chose rock. "
             elif pc_choice == 's':
                 lost()
-                request.session['name'] = "You lose. Computer chose scissors."
+                request.session['response'] = "You lose. Computer chose scissors."
             elif pc_choice == 'p':
                 tied()
-                request.session['name'] = "It's a tie! Computer chose paper as well."
+                request.session['response'] = "It's a tie! Computer chose paper as well."
 
-        elif request.POST['input'] == 's':
+        elif request.POST['option'] == 's':
             if pc_choice == 'p':
                 won()
-                request.session['name'] = "You win! Computer chose paper."
+                request.session['response'] = "You win! Computer chose paper."
             elif pc_choice == 'r':
                 lost()
-                request.session['name'] = "You lose. Computer chose rock."
+                request.session['response'] = "You lose. Computer chose rock."
             elif pc_choice == 's':
                 tied()
-                request.session['name'] = "It's a tie! Computer chose scissors as well."
+                request.session['response'] = "It's a tie! Computer chose scissors as well."
 
-        elif request.POST['input'] != CHOICE:
-            request.session['name'] = "Please type one of the following choices: \'r\' \'p\' \'s\'"
+        elif request.POST['option'] != CHOICE:
+            request.session['response'] = "Please type one of the following choices: \'r\' \'p\' \'s\'"
 
         return redirect('/account/rps')
     else:
