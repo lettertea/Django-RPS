@@ -1,4 +1,5 @@
 # Django-RPS
+Live demo [here](https://django-rps.herokuapp.com/).
 A user-based application where the results of playing "Rock, Paper, Scissors" against the computer are automatically tallied and stored to the database. Each user can add information to their profile which is displayed on the home screen. The application also has a "blog" and "music" section for the superuser, which anyone can view.
 # Prerequisites
 - Django 1.10+. Download and Installation [here](https://www.djangoproject.com/download/).
