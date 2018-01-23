@@ -67,12 +67,12 @@ def rps_play(request):
                 request.session['response'] = "It's a tie! Computer chose scissors as well."
 
         elif request.POST['option'] != CHOICE:
-            request.session['response'] = "Please type one of the following choices: \'r\' \'p\' \'s\'"
+            request.session['response'] = "Please select one of the following choices: \'r\' \'p\' \'s\'"
 
-        return redirect('/account/rps')
+        return redirect('/')
     else:
 
-        return redirect('/account/rps')
+        return redirect('/')
 
 
 def signup(request):
